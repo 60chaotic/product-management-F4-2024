@@ -1,5 +1,6 @@
 const express = require("express");
 const routesClient = require("./routes/client/index.route");
+const routesAdmin = require("./routes/admin/index.route");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
@@ -19,6 +20,10 @@ app.set("view engine", "pug")
 // routesClient
 routesClient.routesClient(app);
 // End routesClient
+
+// routesAdmin
+routesAdmin.routesAdmin(app);
+// End routesAdmin
 
 app.listen(port, () => {
     console.log("App is running on " + port);
