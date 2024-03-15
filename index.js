@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 
 dotenv.config();
 
-mongoose.connect("mongodb://localhost:27017/product-management")
-    .then(() => console.log("Connected!!!"))
+mongoose.connect(process.env.MONGO_URL)
+    .then(() => console.log("Connected!!!"));
 
 const app = express();
 const port = process.env.PORT;
