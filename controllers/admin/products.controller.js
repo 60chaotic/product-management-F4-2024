@@ -1,4 +1,6 @@
 module.exports.index = (req, res) => {
-    res.send("Ok123");
+    res.render("./admin/pages/products/index.pug", {
+        pageTitle: "Trang Quản Lý Sản Phẩm"
+    });
 }
 

@@ -1,3 +1,5 @@
 module.exports.index = (req, res) => {
-    res.send("Ok");
+    res.render("./admin/pages/dashboard/index.pug", {
+        pageTitle: "Trang Tổng Quan"
+    });
 }
